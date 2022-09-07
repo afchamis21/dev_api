@@ -20,7 +20,7 @@ def get_dev(_id):
     except IndexError:
         return {'status': 'error', 'mensagem': f'no entry for id {_id}'}
     except Exception:
-        return jsonify({'status': 'erro', 'mensagem': 'unknown error'})
+        return {'status': 'erro', 'mensagem': 'unknown error'}
 
 
 @app.put('/dev/<int:_id>')
@@ -32,7 +32,7 @@ def put_dev(_id):
     except IndexError:
         return {'status': 'error', 'mensagem': f'no entry for id {_id}'}
     except Exception:
-        return jsonify({'status': 'erro', 'mensagem': 'unknown error'})
+        return {'status': 'erro', 'mensagem': 'unknown error'}
 
 
 @app.delete('/dev/<int:_id>')
@@ -43,7 +43,7 @@ def delete_dev(_id):
     except IndexError:
         return {'status': 'error', 'mensagem': f'no entry for id {_id}'}
     except Exception:
-        return jsonify({'status': 'erro', 'mensagem': 'unknown error'})
+        return {'status': 'erro', 'mensagem': 'unknown error'}
 
 
 @app.get('/dev')
