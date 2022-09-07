@@ -46,9 +46,6 @@ class DevByID(Resource):
             return {'status': 'erro', 'mensagem': 'unknown error'}
 
 
-api.add_resource(DevByID, '/dev/<int:_id>')
-
-
 class Dev(Resource):
     @staticmethod
     def get():
@@ -61,6 +58,7 @@ class Dev(Resource):
         return new_dev
 
 
+api.add_resource(DevByID, '/dev/<int:_id>')
 api.add_resource(Dev, '/dev')
 
 
